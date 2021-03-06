@@ -19,7 +19,7 @@ for row in rows:
     record = {}
     record['address'] = row.find_all('td')[5].text
     record['date_scraped'] = today.strftime("%Y-%m-%d")
-    record['description'] = row.find_all('td')[3].text
+    record['description'] = row.find_all('td')[3].text.replace('â€“', '-')
     record['council_reference'] = row.find_all('td')[1].text
     record['info_url'] = 'https://cn-web.t1cloud.com/T1PRDefault/WebApps/eProperty/P1/PublicNotices/' + \
         str(row.find_all('td')[1]).split('"')[1]
