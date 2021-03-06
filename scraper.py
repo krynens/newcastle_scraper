@@ -1,10 +1,10 @@
+import os
+os.environ["SCRAPERWIKI_DATABASE_NAME"] = "sqlite:///data.sqlite"
+
 import scraperwiki
 import requests
 from datetime import datetime
 from bs4 import BeautifulSoup
-import os
-os.environ["SCRAPERWIKI_DATABASE_NAME"] = "sqlite:///data.sqlite"
-
 
 today = datetime.today()
 
